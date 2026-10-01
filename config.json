@@ -1,0 +1,16 @@
+{
+  "eventDate": "2026-10-10",
+  "eventTimeStart": "14:00",
+  "eventTimeEnd": "16:00",
+  "earlyEntryTime": "13:30",
+  "cakeSaleTime": "13:30",
+  "registrationStart": "2026-09-13T18:00:00+02:00",
+  "tableFee": 16,
+  "depositFee": 10,
+  "cakeFee": 4,
+  "registrationUrl": "https://forms.gle/hY6mdfERbqVeFzBe8",
+  "contactEmail": "info@warmbronner-flohmarkt.de",
+  "venue": "Staigwaldhalle Warmbronn",
+  "street": "Büsnauer Straße 67",
+  "city": "71229 Leonberg"
+}
