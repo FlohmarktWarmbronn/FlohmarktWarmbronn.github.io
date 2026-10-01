@@ -14,6 +14,30 @@
   --body: 'DM Sans', 'Segoe UI', sans-serif;
 }
 
+body[data-season="spring"] {
+  --forest: #176b57;
+  --forest-dark: #105344;
+  --coral: #dc6f61;
+  --yellow: #e4c84d;
+  --blue: #cce9dc;
+  --ink: #233b34;
+  --muted: #65766e;
+  --paper: #f7fbf7;
+  --line: #d9e6dc;
+}
+
+body[data-season="autumn"] {
+  --forest: #4d563e;
+  --forest-dark: #374332;
+  --coral: #bb563d;
+  --yellow: #dfa943;
+  --blue: #e7c7a6;
+  --ink: #302f28;
+  --muted: #70695d;
+  --paper: #faf7f0;
+  --line: #e1d9cc;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }

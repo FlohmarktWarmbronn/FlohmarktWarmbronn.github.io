@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#174f3c">
+		<meta name="theme-color" content="#4d563e">
 		<meta name="description" content="Der Warmbronner Flohmarkt: Kinderkleidung und Spielsachen kaufen oder verkaufen. Alle Infos zu Termin, Anmeldung und Staigwaldhalle.">
 		<title>Warmbronner Flohmarkt</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/app.js" defer></script>
 	</head>
-	<body>
+	<body data-season="autumn">
 		<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 		<div class="announcement">
 			<p>Der nächste Flohmarkt ist am <strong data-config="event.date">wird geladen</strong></p>
@@ -45,7 +45,7 @@
 					  <p class="hero-date"><span class="date-icon" aria-hidden="true" data-config="event.day">wird geladen</span><span><strong data-config="event.date">wird geladen</strong><br><span data-config="event.time">wird geladen</span> · <span data-config="venue.name">wird geladen</span></span></p>
 				</div>
 				<div class="hero-image-wrap">
-					  <img class="hero-image" src="assets/market-toys.jpg" alt="Bunte Spielsachen auf dem Warmbronner Flohmarkt" fetchpriority="high">
+					  <img class="hero-image" data-season-image="hero" src="assets/autumn/18990779.jpg" alt="Kinder spielen an einem herbstlichen Tag draußen" fetchpriority="high">
 					<div class="hero-sticker"><span>Gutes<br>finden.</span><span aria-hidden="true">✳</span><span>Gutes<br>tun.</span></div>
 					<p class="image-caption">Lieblingsstücke finden ein neues Zuhause.</p>
 				</div>
@@ -66,7 +66,7 @@
 					<p>Auf der Suche nach gut erhaltener Kinderkleidung und Spielsachen? Hier wartet vielleicht schon euer nächster Lieblingsfund.</p>
 				</div>
 				<div class="buyer-photo">
-					  <img src="assets/buyer-toys.jpg" alt="Auswahl an Spielsachen auf einem Flohmarkt" loading="lazy">
+					  <img data-season-image="buyer" src="assets/autumn/6349542.jpg" alt="Kinder in warmer Kleidung spielen mit Spielsachen" loading="lazy">
 					<span class="photo-tag">Stöbern lohnt sich</span>
 				</div>
 				<div class="buyer-details">
@@ -90,7 +90,7 @@
 				</div>
 				<div class="seller-grid">
 					<div class="seller-photo">
-						<img src="assets/seller-items.jpg" alt="Kinderkleidung und Spielsachen zum Verkaufen" loading="lazy">
+						<img data-season-image="seller" src="assets/autumn/16729590.jpg" alt="Kleidung an einem Flohmarktstand" loading="lazy">
 						<span class="photo-tag">Kinderkleidung & Spielsachen</span>
 					</div>
 					<div class="seller-details">
@@ -148,7 +148,7 @@
 		<footer class="site-footer">
 			<a class="wordmark footer-wordmark" href="#start"><span class="wordmark-mark" aria-hidden="true">wf</span><span>Warmbronner<br>Flohmarkt</span></a>
 			<p>Organisiert vom Elternbeirat Kinderhaus Warmbronn</p>
-			<a href="https://pixabay.com/de/" target="_blank" rel="noopener noreferrer">Bilder mit freundlicher Unterstützung von Pixabay</a>
+			<a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Fotos: Pexels · Bildquellen</a>
 		</footer>
 		<p class="config-error" data-config-error hidden>Die aktuellen Veranstaltungsdaten konnten nicht geladen werden. Bitte lade die Seite später erneut.</p>
 	</body>

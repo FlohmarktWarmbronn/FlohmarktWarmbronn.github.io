@@ -33,6 +33,50 @@ const setLink = (key, value) => {
 
 const formatTime = (time) => `${time} Uhr`;
 
+const seasonalImages = {
+  spring: {
+    hero: {
+      src: 'assets/spring/36192600.jpg',
+      alt: 'Bunter Kleidermarkt in einer europäischen Altstadt'
+    },
+    buyer: {
+      src: 'assets/spring/6999379.jpg',
+      alt: 'Stoffhase und Ostereier als frühlingshafte Spielsachen'
+    },
+    seller: {
+      src: 'assets/spring/19295108.jpg',
+      alt: 'Kleidung an einem Flohmarktstand im Park'
+    }
+  },
+  autumn: {
+    hero: {
+      src: 'assets/autumn/18990779.jpg',
+      alt: 'Kinder spielen mit Fahrzeugen zwischen bunten Herbstblättern'
+    },
+    buyer: {
+      src: 'assets/autumn/6349542.jpg',
+      alt: 'Kinder in Herbstkleidung spielen mit Spielsachen'
+    },
+    seller: {
+      src: 'assets/autumn/16729590.jpg',
+      alt: 'Kleidung an einem Flohmarktstand'
+    }
+  }
+};
+
+const setSeason = (eventDate) => {
+  const month = eventDate.getMonth() + 1;
+  const season = month >= 3 && month <= 5 ? 'spring' : 'autumn';
+
+  document.body.dataset.season = season;
+  document.querySelector('meta[name="theme-color"]').content = season === 'spring' ? '#176b57' : '#4d563e';
+  document.querySelectorAll('[data-season-image]').forEach((image) => {
+    const seasonalImage = seasonalImages[season][image.dataset.seasonImage];
+    image.src = seasonalImage.src;
+    image.alt = seasonalImage.alt;
+  });
+};
+
 fetch('./config.json', { cache: 'no-store' })
   .then((response) => {
     if (!response.ok) throw new Error('Konfiguration nicht verfügbar');
@@ -45,6 +89,7 @@ fetch('./config.json', { cache: 'no-store' })
     const signupText = registrationDate.format(new Date(config.registrationStart));
     const email = config.contactEmail;
 
+    setSeason(eventDate);
     setText('event.day', String(eventDate.getDate()).padStart(2, '0'));
     setText('event.date', dateText);
     setText('event.time', eventTime);
