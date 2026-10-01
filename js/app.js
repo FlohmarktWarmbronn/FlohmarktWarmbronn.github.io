@@ -36,16 +36,16 @@ const formatTime = (time) => `${time} Uhr`;
 const seasonalImages = {
   spring: {
     hero: {
-      src: 'assets/spring/36192600.jpg',
-      alt: 'Bunter Kleidermarkt in einer europäischen Altstadt'
+      src: 'assets/spring/spring-market.jpg',
+      alt: 'Kinder entdecken Spielsachen an einem Flohmarkt im blühenden Grünen'
     },
     buyer: {
-      src: 'assets/spring/6999379.jpg',
-      alt: 'Stoffhase und Ostereier als frühlingshafte Spielsachen'
+      src: 'assets/spring/spring-play.jpg',
+      alt: 'Kinder spielen an einem sonnigen Frühlingstag am Bach'
     },
     seller: {
-      src: 'assets/spring/19295108.jpg',
-      alt: 'Kleidung an einem Flohmarktstand im Park'
+      src: 'assets/spring/spring-stall.jpg',
+      alt: 'Frühlingsflohmarkt mit Kleidung, Spielsachen und Haushaltswaren'
     }
   },
   autumn: {
@@ -66,10 +66,13 @@ const seasonalImages = {
 
 const setSeason = (eventDate) => {
   const month = eventDate.getMonth() + 1;
-  const season = month >= 3 && month <= 5 ? 'spring' : 'autumn';
+  const seasonOverride = new URLSearchParams(window.location.search).get('season');
+  const season = seasonOverride === 'spring' || seasonOverride === 'autumn'
+    ? seasonOverride
+    : month >= 2 && month <= 6 ? 'spring' : 'autumn';
 
   document.body.dataset.season = season;
-  document.querySelector('meta[name="theme-color"]').content = season === 'spring' ? '#176b57' : '#4d563e';
+  document.querySelector('meta[name="theme-color"]').content = season === 'spring' ? '#246b4b' : '#4d563e';
   document.querySelectorAll('[data-season-image]').forEach((image) => {
     const seasonalImage = seasonalImages[season][image.dataset.seasonImage];
     image.src = seasonalImage.src;

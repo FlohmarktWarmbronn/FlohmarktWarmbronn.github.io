@@ -1,6 +1,7 @@
 Seasonal photos downloaded from Pexels for local use.
 
 Spring:
+- AI-generated spring market images (provided in the project): spring-market.jpg, spring-play.jpg, spring-stall.jpg
 - Photo 36192600: https://www.pexels.com/photo/vintage-clothes-rack-in-colmar-market-street-36192600/
 - Photo 6999379: https://www.pexels.com/photo/white-and-yellow-rabbit-plush-toy-on-blue-background-6999379/
 - Photo 19295108: https://www.pexels.com/photo/clothes-on-market-in-park-19295108/
