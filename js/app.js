@@ -37,29 +37,35 @@ const seasonalImages = {
   spring: {
     hero: {
       src: 'assets/spring/spring-market.jpg',
-      alt: 'Kinder entdecken Spielsachen an einem Flohmarkt im blühenden Grünen'
+      alt: 'Kinder entdecken Spielsachen an einem Flohmarkt im blühenden Grünen',
+      credit: 'KI-generiert'
     },
     buyer: {
       src: 'assets/spring/spring-play.jpg',
-      alt: 'Kinder spielen an einem sonnigen Frühlingstag am Bach'
+      alt: 'Kinder spielen an einem sonnigen Frühlingstag am Bach',
+      credit: 'KI-generiert'
     },
     seller: {
       src: 'assets/spring/spring-stall.jpg',
-      alt: 'Frühlingsflohmarkt mit Kleidung, Spielsachen und Haushaltswaren'
+      alt: 'Frühlingsflohmarkt mit Kleidung, Spielsachen und Haushaltswaren',
+      credit: 'KI-generiert'
     }
   },
   autumn: {
     hero: {
-      src: 'assets/autumn/18990779.jpg',
-      alt: 'Kinder spielen mit Fahrzeugen zwischen bunten Herbstblättern'
+      src: 'new pictures/Copilot_20261002_210205.png',
+      alt: 'Kinder spielen mit Fahrzeugen zwischen bunten Herbstblättern',
+      credit: 'KI generiert'
     },
     buyer: {
-      src: 'assets/autumn/6349542.jpg',
-      alt: 'Kinder in Herbstkleidung spielen mit Spielsachen'
+      src: 'new pictures/Copilot_20261002_211621.png',
+      alt: 'Kinder in Herbstkleidung spielen mit Spielsachen',
+      credit: 'KI generiert'
     },
     seller: {
-      src: 'assets/autumn/16729590.jpg',
-      alt: 'Kleidung an einem Flohmarktstand'
+      src: 'new pictures/Copilot_20261002_205718.png',
+      alt: 'Kleidung an einem Flohmarktstand',
+      credit: 'KI generiert'
     }
   }
 };
@@ -77,6 +83,7 @@ const setSeason = (eventDate) => {
     const seasonalImage = seasonalImages[season][image.dataset.seasonImage];
     image.src = seasonalImage.src;
     image.alt = seasonalImage.alt;
+    image.parentElement.querySelector('[data-image-credit]').textContent = seasonalImage.credit;
   });
 };
 

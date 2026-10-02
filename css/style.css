@@ -83,6 +83,7 @@ h1 span { color: var(--coral); }
 .hero-image-wrap { position: relative; min-width: 0; padding: 0 20px 28px 0; }
 .hero-image { width: 100%; height: clamp(360px, 43vw, 510px); object-fit: cover; }
 .hero-image-wrap::after { position: absolute; z-index: -1; right: 0; bottom: 0; width: 78%; height: 75%; background: var(--blue); content: ''; }
+.image-credit { position: absolute; z-index: 1; top: 12px; right: 12px; padding: 5px 8px; background: rgba(29, 48, 41, .78); color: var(--white); font-size: 9px; font-weight: 700; line-height: 1.2; }
 .hero-sticker { position: absolute; top: 26px; left: -31px; display: flex; width: 114px; aspect-ratio: 1; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-9deg); border-radius: 50%; background: var(--yellow); color: var(--forest); font-family: var(--display); font-size: 16px; line-height: 1.1; text-align: center; }
 .hero-sticker span:nth-child(2) { margin: 2px; color: var(--coral); font-family: var(--body); font-size: 17px; }
 .image-caption { position: absolute; right: 15px; bottom: 5px; margin: 0; color: var(--muted); font-size: 10px; }
