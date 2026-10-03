@@ -96,10 +96,12 @@ fetch('./config.json', { cache: 'no-store' })
     const eventDate = new Date(`${config.eventDate}T12:00:00`);
     const dateText = germanDate.format(eventDate);
     const eventTime = `${config.eventTimeStart}–${config.eventTimeEnd} Uhr`;
-    const signupText = registrationDate.format(new Date(config.registrationStart));
+    const registrationStart = new Date(config.registrationStart);
+    const signupText = registrationDate.format(registrationStart);
     const email = config.contactEmail;
 
     setSeason(eventDate);
+    document.querySelector('[data-registration-opening-note]').hidden = Date.now() >= registrationStart.getTime();
     setText('event.day', String(eventDate.getDate()).padStart(2, '0'));
     setText('event.date', dateText);
     setText('event.time', eventTime);
