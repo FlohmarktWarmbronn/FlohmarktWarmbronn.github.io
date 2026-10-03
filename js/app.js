@@ -33,6 +33,50 @@ const setLink = (key, value) => {
 
 const formatTime = (time) => `${time} Uhr`;
 
+const getLuckyNumberSeed = () => {
+  const storageKey = 'warmbronner-flohmarkt-lucky-number-seed';
+  let storedSeed;
+
+  try {
+    storedSeed = window.localStorage.getItem(storageKey);
+  } catch (error) {
+    console.warn('Die Glückszahlen können in diesem Browser nicht gespeichert werden.', error);
+    return window.crypto.getRandomValues(new Uint32Array(1))[0];
+  }
+
+  if (storedSeed && /^[\da-f]{8}$/i.test(storedSeed)) {
+    return Number.parseInt(storedSeed, 16);
+  }
+
+  const seed = window.crypto.getRandomValues(new Uint32Array(1))[0];
+
+  try {
+    window.localStorage.setItem(storageKey, seed.toString(16).padStart(8, '0'));
+  } catch (error) {
+    console.warn('Die Glückszahlen können in diesem Browser nicht gespeichert werden.', error);
+  }
+
+  return seed;
+};
+
+const setLuckyNumbers = () => {
+  let state = getLuckyNumberSeed() || 0x6d2b79f5;
+  const numbers = new Set();
+
+  while (numbers.size < 3) {
+    state ^= state << 13;
+    state ^= state >>> 17;
+    state ^= state << 5;
+    numbers.add((state >>> 0) % 70 + 1);
+  }
+
+  document.querySelectorAll('[data-lucky-number]').forEach((element, index) => {
+    element.textContent = String([...numbers][index]).padStart(2, '0');
+  });
+};
+
+setLuckyNumbers();
+
 const seasonalImages = {
   spring: {
     hero: {
