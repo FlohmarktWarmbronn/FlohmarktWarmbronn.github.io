@@ -170,6 +170,13 @@ h2 { margin-bottom: 15px; font-size: clamp(38px, 4vw, 52px); line-height: 1.08; 
 .cake-card { overflow: hidden; }
 .cake-doodle { position: absolute; right: 13px; bottom: 4px; display: block; width: 90px; height: 90px; color: var(--yellow); line-height: 1; }
 .cake-doodle.star-symbol::before { inset: 0; }
+.parking-guide { margin-top: 42px; padding: 30px; background: var(--blue); }
+.parking-guide-heading { max-width: 620px; margin: 0 auto 22px; text-align: center; }
+.parking-guide-heading h3 { margin: 7px 0 8px; color: var(--forest); font-family: var(--display); font-size: clamp(27px, 3vw, 36px); line-height: 1.15; }
+.parking-guide-heading > p:last-child { margin: 0; color: var(--muted); font-size: 13px; }
+.parking-map { max-width: 900px; margin: 0 auto; }
+.parking-map img { width: 100%; height: auto; }
+.parking-map figcaption { margin-top: 9px; color: var(--muted); font-size: 10px; text-align: center; }
 
 .site-footer { display: flex; min-height: 103px; align-items: center; justify-content: space-between; gap: 20px; padding: 20px max(32px, calc((100% - 1280px) / 2)); border-top: 1px solid var(--line); }
 .footer-wordmark { flex: 0 0 auto; }
@@ -254,6 +261,7 @@ h2 { margin-bottom: 15px; font-size: clamp(38px, 4vw, 52px); line-height: 1.08; 
   .contact-card, .contact-card + .contact-card { min-height: 0; padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .contact-card:last-child { border-bottom: 0; }
   .contact-card h3 { margin-top: 11px; font-size: 23px; }
+  .parking-guide { margin-top: 28px; padding: 22px 14px; }
   .cake-doodle { right: 18px; bottom: 8px; font-size: 72px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 11px; padding: 22px 18px; }
 }

@@ -36,34 +36,34 @@ const formatTime = (time) => `${time} Uhr`;
 const seasonalImages = {
   spring: {
     hero: {
-      src: 'new pictures/Copilot_20261002_210205.png',
+      src: 'assets/generated/outdoor-market-play.png',
       alt: 'Kinder entdecken Spielsachen an einem Flohmarkt im blühenden Grünen',
       credit: 'KI generiert'
     },
     buyer: {
-      src: 'new pictures/Copilot_20261002_211621.png',
+      src: 'assets/generated/children-playing-outdoors.png',
       alt: 'Kinder spielen an einem sonnigen Frühlingstag am Bach',
       credit: 'KI generiert'
     },
     seller: {
-      src: 'new pictures/Copilot_20261002_205718.png',
+      src: 'assets/generated/market-clothing-stall.png',
       alt: 'Frühlingsflohmarkt mit Kleidung, Spielsachen und Haushaltswaren',
       credit: 'KI generiert'
     }
   },
   autumn: {
     hero: {
-      src: 'new pictures/Copilot_20261002_210205.png',
+      src: 'assets/generated/outdoor-market-play.png',
       alt: 'Kinder spielen mit Fahrzeugen zwischen bunten Herbstblättern',
       credit: 'KI generiert'
     },
     buyer: {
-      src: 'new pictures/Copilot_20261002_211621.png',
+      src: 'assets/generated/children-playing-outdoors.png',
       alt: 'Kinder in Herbstkleidung spielen mit Spielsachen',
       credit: 'KI generiert'
     },
     seller: {
-      src: 'new pictures/Copilot_20261002_205718.png',
+      src: 'assets/generated/market-clothing-stall.png',
       alt: 'Kleidung an einem Flohmarktstand',
       credit: 'KI generiert'
     }
